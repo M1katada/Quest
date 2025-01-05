@@ -1,0 +1,57 @@
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    background: url('https://overclockers.ru/st/legacy/blog/428209/475474_O.jpg') no-repeat center center fixed;
+    background-size: cover;
+    color: white;
+}
+
+.container {
+    text-align: center;
+    padding: 50px;
+}
+
+.question {
+    margin: 20px 0;
+}
+
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    margin: 20px;
+    color: white;
+    background-color: #1e90ff;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 18px;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background-color: #ff4500;
+}
+
+header {
+    background: rgba(0, 0, 0, 0.8);
+    padding: 20px 0;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 36px;
+}
+
+footer {
+    text-align: center;
+    background: rgba(0, 0, 0, 0.8);
+    padding: 10px 0;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+footer p {
+    margin: 0;
+    font-size: 14px;
+}

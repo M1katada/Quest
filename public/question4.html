@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Question 4</title>
+    <link rel="stylesheet" href="styles.css">
+    <script>
+        async function checkAnswer(event) {
+            event.preventDefault();
+
+            const answer = document.querySelector('input[name="answer"]').value;
+            const questionId = "question4";
+
+            const response = await fetch('/check-answer', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ questionId, answer }),
+            });
+
+            const result = await response.json();
+
+            if (result.correct) {
+                window.location.href = "/question5";
+            } else {
+                alert("Wrong answer! Try again.");
+            }
+
+            return false;
+        }
+    </script>
+</head>
+<body>
+    <div class="container">
+        <h2>Question 4</h2>
+        <p class="question">Which planet is closest to the Sun?</p>
+        <form onsubmit="checkAnswer(event)">
+            <input type="text" name="answer" placeholder="Type your answer here" required>
+            <button type="submit" class="btn">Submit</button>
+        </form>
+    </div>
+</body>
+</html>
